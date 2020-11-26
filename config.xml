@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+<config>
+    <version>0.0.1</version>
+    <project>
+        <name>test-github-integation</name>
+        <component>Cloud-Core</component>
+    </project>
+    <artifactory>
+        <serverId>artifactory-new</serverId>
+        <dockerRegistryRoot>cloud-core</dockerRegistryRoot><!--TODO change to correct registry-->
+        <url>artifactorycn.netcracker.com</url>
+        <dockerRegistryPort>17004</dockerRegistryPort>
+        <dockerRegistryStagingPort>17002</dockerRegistryStagingPort>
+        <dockerRegistryReleasePort>17003</dockerRegistryReleasePort>
+        <dockerRepository>pd.saas.docker.dev</dockerRepository>
+        <dockerGroupRepository>pd.saas.docker.group</dockerGroupRepository>
+        <dockerRepositoryStaging>pd.saas.docker.staging</dockerRepositoryStaging>
+        <dockerRepositoryRelease>pd.saas.docker</dockerRepositoryRelease>
+        <mavenTargetSnapshotRepository>pd.saas.mvn.snapshots</mavenTargetSnapshotRepository>
+        <mavenTargetStagingRepository>pd.saas.mvn.staging</mavenTargetStagingRepository>
+        <mavenTargetReleaseRepository>pd.saas.mvn</mavenTargetReleaseRepository>
+        <mavenProxySnapshotRepository>pd.saas.mvn.group</mavenProxySnapshotRepository>
+        <mavenProxyReleaseRepository>pd.saas-release.mvn.group</mavenProxyReleaseRepository>
+    </artifactory>
+    <descriptor>
+        <group>com.netcracker.cloud.core.kssh.deployment-descriptor</group><!--TODO change to correct one-->
+        <artifact>deployment-artifacts</artifact><!--TODO change to correct one-->
+    </descriptor>
+    <applications>
+        <service>
+            <name>java-microservice</name>
+            <gitUrl>https://github.com/Ksiona/integration-test.git</gitUrl>
+        </service>
+    </applications>
+</config>

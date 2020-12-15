@@ -10,7 +10,6 @@ public class Application {
         while (true) {
             String greeting = greetingService.getGreeting();
             System.out.println(greeting);
-            //wait 10 seconds
             Thread.sleep(10000);
         }
     }
